@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- 문제1)
+    다음과 같이 주어진 태그들을 스크립트상 코드를 이용해서
+    사진처럼 구현되도록 해보세요 -->
+<input type="text" id="a" value="hello world">
+<button onclick="alert('hello world')" id="b">안녕</button>
+<div id="c">아이디</div>
+<div class="d">클래스</div>
+
+<script>
+// document.querySelector('button').innerText = "hello";
+// document.querySelector('input').value = "Hello world";
+// document.querySelector('#a').innerText = "id a";
+// document.querySelector('#b').innerText = "id b";
+// document.querySelector('#c').innerText = "id c";
+// document.querySelector('.d').innerText = "class d";
+
+// document.getElementById('a').innerHTML = "아이디가 a";
+// document.getElementById('b').innerHTML = "안녕";
+// document.getElementById('c').innerHTML = "아이디";
+// document.getElementsByClassName('d')[0].innerHTML = "클래스";
+
+
+
+document.querySelector("input").value = "input";
+
+document.querySelector('button').innerText = "button";
+// document.getElementById("b").innerHTML = "button";
+
+// document.querySelector('#c').innerText = "div태그의 아이디c";
+document.getElementById("c").innerHTML = "div태그의 아이디c";
+// document.querySelector('div')[0].innerText = "div태그의 아이디c"; //이렇게 하면 안됨!
+
+// document.querySelector('.d').innerText = "div태그의 클래스d";
+document.getElementsByClassName("d")[0].innerHTML = "div태그의 클래스d" 
+// document.querySelector('div')[1].innerText = "div태그의 클래스d"; //이렇게 하면 안됨!
+    
+</script>
+
+</body>
+</html>
